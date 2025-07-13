@@ -1,0 +1,243 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Base Styles === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* === Header === */
+.head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.head p:first-child {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4757;
+  margin-bottom: 10px;
+}
+
+.head p:last-child {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* === Search Area === */
+section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.inp {
+  padding: 10px 15px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.searchBtn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchBtn:hover {
+  background-color: #0056b3;
+}
+
+/* === Display Manga Cards === */
+.displayDiv {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card Styles */
+.displayDiv div {
+  background-color: #1e1e1e;
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.displayDiv div:hover {
+  transform: scale(1.03);
+}
+
+.displayDiv h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffdd57;
+}
+
+.displayDiv img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.displayDiv p {
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.displayDiv a {
+  display:  inline;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+.displayDiv a:hover {
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ff4757;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.chapter-card{
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px 20px;
+    width: 90%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.chapter-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    background-color: #1a2c2f;
+    border-color: #26c6da;
+}
+
+.manga-page {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn{ 
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  background-color: #ff4757;
+  height:40px;
+  width:70px;
+  border: #1e1e1e solid black;
+  border-radius:5px;
+  transition: background-color 0.3s ease;
+} 
+
+
+/*  loading  */
+#loading-bar-spinner.spinner {
+    left: 50%;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 19 !important;
+    animation: loading-bar-spinner 400ms linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+    width: 40px;
+    height: 40px;
+    border:  solid 4px transparent;
+    border-top-color:  #00C8B1 !important;
+    border-left-color: #00C8B1 !important;
+    border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 60px;
+  aspect-ratio: 1;
+  position: relative;
+  border: 3px solid #0000;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: auto 35% 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CF4647;
+  animation: l6-0 .5s cubic-bezier(0,800,1,800) infinite;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  outline: 3px solid #524656;
+  animation: l6-1 .5s linear infinite;
+}
+@keyframes l6-0 {
+  0%,2% {bottom: 0%}
+  98%,to {bottom:.1%}
+}
+@keyframes l6-1 {
+  0%,30% {rotate:  0deg}
+  70%,to {rotate: 90deg}
+}

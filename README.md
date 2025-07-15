@@ -1,4 +1,4 @@
-# 📚 read-drift
+# READRIFT
 
 A modern, visually stunning web application for discovering, reading, and saving your favorite manga. Built with a focus on user experience, speed, and beautiful design.
 
